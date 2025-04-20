@@ -1,10 +1,17 @@
-wget https://download948.mediafire.com/t6p1g4rhxcdgAgHnFMRpiXPA6RiuA6vh8LjDUiGoC_Mgkl1xjYUhVnnJWSDSuHbPzunJmVrKC8aGkY-8gtHpb8fesI0xbIIih3WQc2GP8mtuTvFBGbkkFg5CQjaM3TeDpyWLO_hj4BNtdOLDhtooplJjlvh0crDvjgxYPF3sYfjv5Xw/ysa88nkumda9cg0/Eaglercraft-1.12-Server-Hosting-codespaces-ONLY.zip
-unzip Eaglercraft-1.12-Server-Hosting-codespaces-ONLY.zip
-cd Eaglercraft-1.12-Server-Hosting-codespaces-ONLY
-sudo apt update
-sudo apt-get install openjdk-17-jdk
+git clone https://gitlab.com/potato1234/mc-2/
+echo starting...
 cd bungee
-java -jar bungee.jar &
-cd ..
-cd server
-java -jar server.jar
+
+MTOD="${MTOD:-'@atypicalpotato on youtube'}"
+
+sed -i 's/${SERVER}/'"$SERVER"'/g' config.yml
+
+cd plugins
+cd EaglercraftXBungee
+
+sed -i 's/${MTOD}/'"$MTOD"'/g' listeners.yml
+
+cd /
+cd bungee
+
+java -Xmx1024M -Xms1024M -jar bungee.jar
