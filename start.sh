@@ -1,4 +1,5 @@
 git clone https://gitlab.com/potato1234/mc-2/
+cd mc-2
 echo starting...
 cd bungee
 
