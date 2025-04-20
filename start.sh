@@ -3,7 +3,7 @@ cd mc-2
 echo starting...
 cd bungee
 
-MTOD="${MTOD:-'@atypicalpotato on youtube'}"
+MTOD="${MTOD:-'WADMC.SITE RULES!!!'}"
 
 sed -i 's/${SERVER}/'"$SERVER"'/g' config.yml
 
